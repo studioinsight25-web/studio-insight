@@ -1,12 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import { NextSeo } from "next-seo";
 import ReviewCard from "../components/ReviewCard";
+
+export const metadata = {
+  title: "Studio Insight – Home",
+  description:
+    "Diepgaande reviews voor ondernemers & creators. Eerlijk, praktisch en gericht op prestaties in echte studio- en podcast-workflows.",
+  openGraph: {
+    title: "Studio Insight – Home",
+    description:
+      "Diepgaande reviews voor ondernemers & creators. Eerlijk, praktisch en gericht op prestaties in echte studio- en podcast-workflows.",
+    images: ["/hero-mic.png"],
+  },
+};
 
 export default function Home() {
   return (
     <>
-      <NextSeo title="Home" />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 opacity-60 pointer-events-none bg-gradient-to-br from-brand-light via-white to-skysoft" />
         <div className="max-w-6xl mx-auto px-6 py-16">
@@ -20,16 +30,28 @@ export default function Home() {
                 gericht op prestaties in échte studio- en podcast-workflows.
               </p>
               <div className="mt-8 flex gap-4">
-                <Link href="/reviews" className="inline-block bg-brand text-white px-6 py-3 rounded-2xl shadow-soft hover:bg-brand-dark transition">
+                <Link
+                  href="/reviews"
+                  className="inline-block bg-brand text-white px-6 py-3 rounded-2xl shadow-soft hover:bg-brand-dark transition"
+                >
                   Lees reviews
                 </Link>
-                <Link href="#about" className="inline-block px-6 py-3 rounded-2xl border border-ink/10 hover:bg-brand-light transition">
+                <Link
+                  href="#about"
+                  className="inline-block px-6 py-3 rounded-2xl border border-ink/10 hover:bg-brand-light transition"
+                >
                   Over Studio Insight
                 </Link>
               </div>
             </div>
             <div className="justify-self-center">
-              <Image src="/hero-mic.png" alt="Microfoon" width={520} height={420} className="rounded-2xl shadow-soft" />
+              <Image
+                src="/hero-mic.png"
+                alt="Microfoon"
+                width={520}
+                height={420}
+                className="rounded-2xl shadow-soft"
+              />
             </div>
           </div>
         </div>
@@ -38,7 +60,9 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Laatste reviews</h2>
-          <Link href="/reviews" className="text-ink-soft hover:underline">Alles bekijken →</Link>
+          <Link href="/reviews" className="text-ink-soft hover:underline">
+            Alles bekijken →
+          </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           <ReviewCard
