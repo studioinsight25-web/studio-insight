@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Creative studio vibes */
+:root {
+  --radius: 1rem;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-3;
+}
+.prose ul {
+  @apply list-disc pl-6;
+}
